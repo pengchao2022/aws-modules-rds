@@ -24,24 +24,24 @@ module "rds" {
   source = "./modules/rds"
 
   # RDS basic configuration
-  engine         = var.engine
-  engine_version = var.engine_version
-  instance_class = var.instance_class
+  engine            = var.engine
+  engine_version    = var.engine_version
+  instance_class    = var.instance_class
   allocated_storage = var.allocated_storage
-  storage_type     = var.storage_type
+  storage_type      = var.storage_type
 
   # database credentials
-  db_name        = var.db_name
-  username       = var.username
-  password       = random_password.master_password.result
+  db_name  = var.db_name
+  username = var.username
+  password = random_password.master_password.result
 
   # network configuration
-  vpc_id         = var.vpc_id
-  subnet_ids     = var.subnet_ids
-  
+  vpc_id     = var.vpc_id
+  subnet_ids = var.subnet_ids
+
   # replica sets configuration
-  replica_count  = var.replica_count
-  
+  replica_count = var.replica_count
+
   # others
   publicly_accessible = var.publicly_accessible
   skip_final_snapshot = var.skip_final_snapshot
