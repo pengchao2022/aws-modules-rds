@@ -33,11 +33,11 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
 resource "aws_db_instance" "master" {
   identifier = "${var.db_name}-master"
 
-  engine         = var.engine
-  engine_version = var.engine_version
-  instance_class = var.instance_class
+  engine            = var.engine
+  engine_version    = var.engine_version
+  instance_class    = var.instance_class
   allocated_storage = var.allocated_storage
-  storage_type     = var.storage_type
+  storage_type      = var.storage_type
 
   db_name  = var.db_name
   username = var.username
