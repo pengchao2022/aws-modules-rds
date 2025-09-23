@@ -40,6 +40,7 @@ multi_az            = false
 
 ```shell
  aws secretsmanager get-secret-value --secret-id rds-credentials-pengchaodata --query SecretString --output text
+```
+```text
 {"dbname":"pengchaodata","engine":"mysql","password":"Qfgfz2WXNnO4bxu6","username":"allen"}
-
 ```
